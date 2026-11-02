@@ -64,13 +64,6 @@ The sample label uses a made-up name and address.
 
 You can also paste it into a single request's Post Response script.
 
-## Things to know
-
-- **ZPL is rendered online.** ZPL labels are turned into an image by [Labelary](https://labelary.com/service.html). This sends the label content, which usually includes names and addresses, to `api.labelary.com`. If that isn't acceptable, point the URL in the script at a self-hosted Labelary instance, or only use it with test data.
-- **PDF stays on your machine.** PDF labels are drawn locally. The script only downloads the PDF viewer library ([pdf.js](https://mozilla.github.io/pdf.js/)) from cdnjs, so it needs an internet connection.
-- **PDF previews may flicker** while they render. This comes from how Bruno's Visualize view currently reloads content that runs a script. ZPL labels are not affected.
-- Only the first label in a response is shown. For PDFs, only the first page is shown.
-- The script runs on every request it's attached to. For responses without a label it just shows a short message in the Label view and changes nothing else.
 
 ## Background
 
